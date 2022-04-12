@@ -31,12 +31,12 @@ extension SplashPresenter: SplashViewOutputs {
     }
     func setUI() {
         view?.prepareUI()
-        onUserCheck()
+        onCheck()
     }
     
-    func onUserCheck() {
-        DispatchQueue.main.async {
-          self.dependencies.interactor.onCheck()
+    func onCheck() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.dependencies.interactor.onCheck()
         }
     }
 }
@@ -46,9 +46,5 @@ extension SplashPresenter: SplashInteractorOutputs {
     func onLoggedIn() {
         dependencies.router.presentHome()
     }
-
-    func onError(error: BaseModelError) {
-        view?.onError(error: error)
-    }
-
+    
 }

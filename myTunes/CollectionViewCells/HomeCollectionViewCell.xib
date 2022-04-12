@@ -1,21 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="myTunes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="216"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="213" height="216"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-01-wek">
+                        <rect key="frame" x="0.0" y="0.0" width="213" height="216"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-fc-EJH">
+                                <rect key="frame" x="46.5" y="5" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Frs-wo-wKw"/>
+                                    <constraint firstAttribute="width" constant="120" id="MH5-Do-dtN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqx-NI-EHW">
+                                <rect key="frame" x="15" y="135" width="183" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ES3-TF-IQS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" name="color_primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="color_background"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uqx-NI-EHW" secondAttribute="trailing" constant="15" id="8Gm-5g-U3J"/>
+                            <constraint firstItem="iOb-fc-EJH" firstAttribute="top" secondItem="PoW-01-wek" secondAttribute="top" constant="5" id="nQV-oW-KYc"/>
+                            <constraint firstItem="uqx-NI-EHW" firstAttribute="top" secondItem="iOb-fc-EJH" secondAttribute="bottom" constant="10" id="odO-h6-7Gu"/>
+                            <constraint firstItem="uqx-NI-EHW" firstAttribute="centerX" secondItem="iOb-fc-EJH" secondAttribute="centerX" id="t1p-rb-AEv"/>
+                            <constraint firstItem="uqx-NI-EHW" firstAttribute="leading" secondItem="PoW-01-wek" secondAttribute="leading" constant="15" id="zb9-SB-I16"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PoW-01-wek" secondAttribute="trailing" id="IKA-A4-G1V"/>
+                <constraint firstAttribute="bottom" secondItem="PoW-01-wek" secondAttribute="bottom" id="Ic8-F3-qxh"/>
+                <constraint firstItem="PoW-01-wek" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Quh-he-mvB"/>
+                <constraint firstItem="PoW-01-wek" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="poM-2z-CAI"/>
+            </constraints>
+            <size key="customSize" width="213" height="216"/>
+            <connections>
+                <outlet property="ivItem" destination="iOb-fc-EJH" id="kdJ-wi-QMU"/>
+                <outlet property="lblItem" destination="uqx-NI-EHW" id="6Bz-MD-mNe"/>
+            </connections>
+            <point key="canvasLocation" x="250.00000000000003" y="131.25"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="color_background">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_primary">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

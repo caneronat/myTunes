@@ -16,7 +16,7 @@ public class APIErrorGenerator{
         }
         
         if alertText == ""{
-            alertText = "Bilinmeyen bir hata oluştu."
+            alertText = "An unknown error has occurred."
         }
         
         return alertText

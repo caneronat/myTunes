@@ -9,7 +9,6 @@ import Foundation
 
 protocol SplashInteractorOutputs: AnyObject {
     func onLoggedIn()
-    func onError(error: BaseModelError)
 }
 
 final class SplashInteractor: BaseInteractor, Interactorable {
@@ -19,5 +18,5 @@ final class SplashInteractor: BaseInteractor, Interactorable {
     func onCheck(){
         self.presenter?.onLoggedIn()
     }
-
+    
 }

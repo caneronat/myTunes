@@ -36,8 +36,8 @@ class HomeRouterOutput: Routerable {
         self.view = view
     }
     
-    func presentHome() {
-        //HomeRouterInput().present(from: view, entryEntity: HomeEntryEntity())
+    func presentDetail(data:Result) {
+        DetailRouterInput().present(from: view, entryEntity: DetailEntryEntity(detail: data))
     }
     
 

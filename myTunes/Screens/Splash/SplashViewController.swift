@@ -9,7 +9,6 @@ import UIKit
 
 protocol SplashViewInputs: AnyObject {
     func prepareUI()
-    func onError(error: BaseModelError)
 }
 
 protocol SplashViewOutputs: AnyObject {
@@ -18,22 +17,34 @@ protocol SplashViewOutputs: AnyObject {
 
 class SplashViewController: UIViewController {
     
+    @IBOutlet weak var lblMainTitle: UILabel!
+    
     internal var presenter: SplashViewOutputs?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         
     }
-
+    
 }
 
 extension SplashViewController: SplashViewInputs {
     func prepareUI() {
+        mainScreenAnimation()
     }
     
-    func onError(error: BaseModelError) {
-        AlertUtil.showStandardAlert(parentController: self, message: APIErrorGenerator().generateError(error: error))
+    func mainScreenAnimation(){
+        lblMainTitle.text = ""
+        var charIndex = 0.0
+        let titleText = "myTunes👽"
+        
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.3 * charIndex, repeats: false) { (timer) in
+                self.lblMainTitle.text?.append(letter)
+            }
+            charIndex += 1
+        }
     }
     
 }

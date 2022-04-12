@@ -9,10 +9,10 @@ import Alamofire
 import AlamofireMapper
 
 class Services {
-     let baseUrl = "https://itunes.apple.com/search?"
     
-    // MARK: getData
-    public func getData(term:String,media:String,successCompletion: @escaping ((_ json : ITunesDataModel) -> Void), errorCompletion: @escaping ((_ message : BaseModelError) -> Void)) {
+    let baseUrl = "https://itunes.apple.com/search?"
+    
+    public func getTermMedia(term:String,media:String,successCompletion: @escaping ((_ json : ITunesDataModel) -> Void), errorCompletion: @escaping ((_ message : BaseModelError) -> Void)) {
           Alamofire.request(self.baseUrl + "term=\(term)" + "&media=\(media)", method: .get, encoding: JSONEncoding.default, headers: ["Content-Type":"application/json"]).responseObject { (response: DataResponse<ITunesDataModel>) in
               switch response.result {
               case .success(let model):

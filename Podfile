@@ -11,6 +11,6 @@ target 'myTunes' do
   pod 'Kingfisher'
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
-  pod 'lottie-ios'
+  pod 'IQKeyboardManagerSwift'
   pod 'ProgressHUD'
 end

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		60C6DF5D570F690AB67EB8A1 /* Pods_myTunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5A8B9AA235F2CEA95D71FB /* Pods_myTunes.framework */; };
+		69895EC32805FD6C00847C6D /* DispatchQueue+Dedupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895EC22805FD6C00847C6D /* DispatchQueue+Dedupe.swift */; };
+		69895EC52806075E00847C6D /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895EC42806075E00847C6D /* MediaType.swift */; };
+		69895EC72806178700847C6D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895EC62806178700847C6D /* UIColor+Extension.swift */; };
+		69895ECA2806197800847C6D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895EC82806197800847C6D /* DetailViewController.swift */; };
+		69895ECB2806197800847C6D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69895EC92806197800847C6D /* DetailViewController.xib */; };
+		69895ECD2806198800847C6D /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895ECC2806198800847C6D /* DetailPresenter.swift */; };
+		69895ECF2806199900847C6D /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895ECE2806199800847C6D /* DetailInteractor.swift */; };
+		69895ED1280619A500847C6D /* DetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895ED0280619A500847C6D /* DetailEntities.swift */; };
+		69895ED5280619C600847C6D /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69895ED4280619C600847C6D /* DetailRouter.swift */; };
 		69C2298A280579CB00AF312F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C22989280579CB00AF312F /* BaseModel.swift */; };
 		69C2298C28057B0600AF312F /* ITunesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C2298B28057B0600AF312F /* ITunesDataModel.swift */; };
 		69C2298E2805821000AF312F /* HomeCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C2298D2805821000AF312F /* HomeCollectionViewSource.swift */; };
@@ -44,6 +53,15 @@
 /* Begin PBXFileReference section */
 		250FBBF8AF0A267038035B8F /* Pods-myTunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTunes.debug.xcconfig"; path = "Target Support Files/Pods-myTunes/Pods-myTunes.debug.xcconfig"; sourceTree = "<group>"; };
 		2D5A8B9AA235F2CEA95D71FB /* Pods_myTunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myTunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69895EC22805FD6C00847C6D /* DispatchQueue+Dedupe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Dedupe.swift"; sourceTree = "<group>"; };
+		69895EC42806075E00847C6D /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
+		69895EC62806178700847C6D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		69895EC82806197800847C6D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		69895EC92806197800847C6D /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		69895ECC2806198800847C6D /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		69895ECE2806199800847C6D /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		69895ED0280619A500847C6D /* DetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEntities.swift; sourceTree = "<group>"; };
+		69895ED4280619C600847C6D /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		69C22989280579CB00AF312F /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		69C2298B28057B0600AF312F /* ITunesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesDataModel.swift; sourceTree = "<group>"; };
 		69C2298D2805821000AF312F /* HomeCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewSource.swift; sourceTree = "<group>"; };
@@ -233,6 +251,7 @@
 			children = (
 				69F1355E28057502003A7813 /* APIStatusCodes.swift */,
 				69F1356028057513003A7813 /* APIErrors.swift */,
+				69895EC42806075E00847C6D /* MediaType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -240,6 +259,8 @@
 		69F1352F28057029003A7813 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				69895EC22805FD6C00847C6D /* DispatchQueue+Dedupe.swift */,
+				69895EC62806178700847C6D /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +294,12 @@
 		69F135322805707A003A7813 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				69895EC82806197800847C6D /* DetailViewController.swift */,
+				69895ECC2806198800847C6D /* DetailPresenter.swift */,
+				69895ECE2806199800847C6D /* DetailInteractor.swift */,
+				69895ED0280619A500847C6D /* DetailEntities.swift */,
+				69895ED4280619C600847C6D /* DetailRouter.swift */,
+				69895EC92806197800847C6D /* DetailViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -347,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C229922805821E00AF312F /* HomeCollectionViewCell.xib in Resources */,
+				69895ECB2806197800847C6D /* DetailViewController.xib in Resources */,
 				69F1351E28056C9D003A7813 /* LaunchScreen.storyboard in Resources */,
 				69F13536280570D5003A7813 /* SplashViewController.xib in Resources */,
 				69F1351B28056C9D003A7813 /* Assets.xcassets in Resources */,
@@ -412,6 +440,8 @@
 				69F135552805739E003A7813 /* HomeInteractor.swift in Sources */,
 				69F1355328057391003A7813 /* HomePresenter.swift in Sources */,
 				69F1354628057218003A7813 /* Interactorable.swift in Sources */,
+				69895ED1280619A500847C6D /* DetailEntities.swift in Sources */,
+				69895EC32805FD6C00847C6D /* DispatchQueue+Dedupe.swift in Sources */,
 				69F1355F28057502003A7813 /* APIStatusCodes.swift in Sources */,
 				69F1353C28057112003A7813 /* SplashEntities.swift in Sources */,
 				69F13559280573B7003A7813 /* HomeRouter.swift in Sources */,
@@ -421,14 +451,20 @@
 				69F1355B280573D0003A7813 /* AlertUtil.swift in Sources */,
 				69C2298E2805821000AF312F /* HomeCollectionViewSource.swift in Sources */,
 				69F1354828057232003A7813 /* Presenterable.swift in Sources */,
+				69895EC72806178700847C6D /* UIColor+Extension.swift in Sources */,
 				69F13535280570D5003A7813 /* SplashViewController.swift in Sources */,
+				69895ECD2806198800847C6D /* DetailPresenter.swift in Sources */,
+				69895EC52806075E00847C6D /* MediaType.swift in Sources */,
 				69F13544280571F6003A7813 /* Routerable.swift in Sources */,
 				69F13538280570F2003A7813 /* SplashPresenter.swift in Sources */,
 				69C2298C28057B0600AF312F /* ITunesDataModel.swift in Sources */,
 				69F13542280571AD003A7813 /* BaseInteractor.swift in Sources */,
 				69F1353A28057106003A7813 /* SplashInteractor.swift in Sources */,
+				69895ECA2806197800847C6D /* DetailViewController.swift in Sources */,
 				69C2298A280579CB00AF312F /* BaseModel.swift in Sources */,
+				69895ED5280619C600847C6D /* DetailRouter.swift in Sources */,
 				69F135402805716C003A7813 /* ExpandableView.swift in Sources */,
+				69895ECF2806199900847C6D /* DetailInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

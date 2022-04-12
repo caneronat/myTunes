@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,19 +23,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSC-vS-UBP">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <searchBar opaque="NO" contentMode="redraw" placeholder="Search..." showsCancelButton="YES" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-df-j4d">
-                            <rect key="frame" x="0.0" y="60" width="414" height="98"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            <scopeButtonTitles>
-                                <string>All</string>
-                                <string>Music</string>
-                                <string>Movies</string>
-                                <string>Podcast</string>
-                            </scopeButtonTitles>
-                        </searchBar>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SfU-Es-WoN">
-                            <rect key="frame" x="0.0" y="158" width="414" height="738"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SfU-Es-WoN">
+                            <rect key="frame" x="0.0" y="218" width="414" height="678"/>
+                            <color key="backgroundColor" name="color_background"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yp1-Pd-of5">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,33 +33,66 @@
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCs-Jb-2jM">
+                            <rect key="frame" x="0.0" y="50" width="414" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ObC-Zl-3ff">
+                                    <rect key="frame" x="147" y="7.5" width="120" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Dkb-fl-S0D"/>
+                                        <constraint firstAttribute="width" constant="120" id="Gxi-pU-Rgm"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" name="color_background"/>
+                            <constraints>
+                                <constraint firstItem="ObC-Zl-3ff" firstAttribute="centerX" secondItem="ZCs-Jb-2jM" secondAttribute="centerX" id="34B-YN-pHb"/>
+                                <constraint firstItem="ObC-Zl-3ff" firstAttribute="centerY" secondItem="ZCs-Jb-2jM" secondAttribute="centerY" id="Crv-rw-oK8"/>
+                                <constraint firstAttribute="height" constant="60" id="Geg-B0-3eb"/>
+                            </constraints>
+                        </view>
+                        <searchBar opaque="NO" contentMode="redraw" placeholder="Search..." showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-df-j4d">
+                            <rect key="frame" x="0.0" y="110" width="414" height="98"/>
+                            <color key="backgroundColor" name="color_background"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            <scopeButtonTitles>
+                                <string>Software</string>
+                                <string>Music</string>
+                                <string>Movies</string>
+                                <string>E-Book</string>
+                            </scopeButtonTitles>
+                        </searchBar>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="color_background"/>
                     <constraints>
+                        <constraint firstItem="8e5-df-j4d" firstAttribute="top" secondItem="ZCs-Jb-2jM" secondAttribute="bottom" id="2zs-3x-1Jr"/>
                         <constraint firstAttribute="bottom" secondItem="SfU-Es-WoN" secondAttribute="bottom" id="6o7-ni-F1T"/>
-                        <constraint firstItem="8e5-df-j4d" firstAttribute="top" secondItem="QSC-vS-UBP" secondAttribute="top" constant="60" id="D7c-h0-mTv"/>
                         <constraint firstItem="SfU-Es-WoN" firstAttribute="leading" secondItem="QSC-vS-UBP" secondAttribute="leading" id="FIR-fi-Dae"/>
+                        <constraint firstItem="ZCs-Jb-2jM" firstAttribute="top" secondItem="QSC-vS-UBP" secondAttribute="top" constant="50" id="Sdv-1X-Kd9"/>
                         <constraint firstAttribute="trailing" secondItem="8e5-df-j4d" secondAttribute="trailing" id="Sv7-dS-8lU"/>
+                        <constraint firstAttribute="trailing" secondItem="ZCs-Jb-2jM" secondAttribute="trailing" id="YDh-wu-XCu"/>
                         <constraint firstItem="8e5-df-j4d" firstAttribute="leading" secondItem="QSC-vS-UBP" secondAttribute="leading" id="aCK-bp-6ix"/>
                         <constraint firstAttribute="trailing" secondItem="SfU-Es-WoN" secondAttribute="trailing" id="qeJ-v2-zKU"/>
-                        <constraint firstItem="SfU-Es-WoN" firstAttribute="top" secondItem="8e5-df-j4d" secondAttribute="bottom" id="xgO-QY-88N"/>
+                        <constraint firstItem="ZCs-Jb-2jM" firstAttribute="leading" secondItem="QSC-vS-UBP" secondAttribute="leading" id="uYX-OE-eCJ"/>
+                        <constraint firstItem="SfU-Es-WoN" firstAttribute="top" secondItem="8e5-df-j4d" secondAttribute="bottom" constant="10" id="xgO-QY-88N"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="color_background"/>
             <constraints>
                 <constraint firstItem="QSC-vS-UBP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OeZ-u0-hc9"/>
                 <constraint firstItem="QSC-vS-UBP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ghH-SF-F0N"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QSC-vS-UBP" secondAttribute="trailing" id="igp-b8-IFv"/>
                 <constraint firstAttribute="bottom" secondItem="QSC-vS-UBP" secondAttribute="bottom" id="oyb-lv-bbD"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="75"/>
+            <point key="canvasLocation" x="131.8840579710145" y="75"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ic_logo" width="138" height="134"/>
+        <namedColor name="color_background">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

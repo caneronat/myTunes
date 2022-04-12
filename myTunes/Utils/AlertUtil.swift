@@ -11,7 +11,7 @@ import UIKit
 class AlertUtil {
     public static func showStandardAlert(parentController: UIViewController, title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             switch action.style{
                 case .default:
                     alertController.dismiss(animated: true, completion: nil)
@@ -28,8 +28,8 @@ class AlertUtil {
     }
     
     public static func showStandardAlert(parentController: UIViewController, message: String){
-        let alertController = UIAlertController(title: "Hata", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             switch action.style{
                 case .default:
                     alertController.dismiss(animated: true, completion: nil)
@@ -47,7 +47,7 @@ class AlertUtil {
     
     public static func showStandardAlertWithCompletion(parentController: UIViewController, title: String, message: String, completion: @escaping (() -> Void)){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             switch action.style{
                 case .default:
                     completion()
@@ -97,7 +97,7 @@ class AlertUtil {
     
     public static func showStandardAlertAndGoBack(parentController: UIViewController, title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             switch action.style{
             case .default:
                 alertController.dismiss(animated: true, completion: nil)
@@ -116,7 +116,7 @@ class AlertUtil {
     
     public static func showStandardAlertWithAction(parentController: UIViewController, title: String, message: String, optionAction: @escaping (() -> Void)){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             switch action.style{
                 case .default:
                     optionAction()
@@ -135,7 +135,7 @@ class AlertUtil {
     
     public static func showActionSheet(parentController: UIViewController, title: String, message: String, optionAction: @escaping (() -> Void)){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Tamam", style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             switch action.style{
                 case .default:
                     optionAction()

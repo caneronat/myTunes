@@ -7,11 +7,12 @@
 
 import Foundation
 
+// MARK: - ITunesDataModel
 struct ITunesDataModel: Codable {
-    let results: [results]
+    let results: [Result]
 }
 
-struct results: Codable {
+struct Result: Codable {
     var artistName: String
     let trackName: String
     let artworkUrl100: String

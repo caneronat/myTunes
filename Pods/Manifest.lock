@@ -2,8 +2,8 @@ PODS:
   - Alamofire (4.9.1)
   - AlamofireMapper (1.0.0):
     - Alamofire (~> 4.1)
+  - IQKeyboardManagerSwift (6.5.9)
   - Kingfisher (7.2.0)
-  - lottie-ios (3.3.0)
   - ProgressHUD (13.6)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -15,8 +15,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireMapper
+  - IQKeyboardManagerSwift
   - Kingfisher
-  - lottie-ios
   - ProgressHUD
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
@@ -25,8 +25,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireMapper
+    - IQKeyboardManagerSwift
     - Kingfisher
-    - lottie-ios
     - ProgressHUD
     - RxCocoa
     - RxRelay
@@ -35,13 +35,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireMapper: bdcd94eb53ab63ec9a12e4685bba73e3d0072f36
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
-  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 14ca35c7cc88940716c32ce36c92a4f9d41bed1a
+PODFILE CHECKSUM: 29ffdd0a38f06a69c541992e03450ea296383bd1
 
 COCOAPODS: 1.11.3

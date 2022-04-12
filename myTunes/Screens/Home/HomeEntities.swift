@@ -14,7 +14,9 @@ class HomeEntities {
     var entryEntity: HomeEntryEntity
     var source: HomeCollectionViewSource?
     
+    var dataModelList: [Result]?
     init(entryEntity: HomeEntryEntity) {
         self.entryEntity = entryEntity
+        
     }
 }

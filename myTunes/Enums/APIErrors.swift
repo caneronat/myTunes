@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public enum APIErrors: String {
     case Alamofire
     case Fatal
